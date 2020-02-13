@@ -29,6 +29,7 @@ const getPhetLibs = require( './getPhetLibs' );
 const lint = require( './lint' );
 const minify = require( './minify' );
 const reportMedia = require( './reportMedia' );
+const reportJava = require( './reportJava' );
 const reportThirdParty = require( './reportThirdParty' );
 const SimVersion = require( '../SimVersion' );
 const updateCopyrightDates = require( './updateCopyrightDates' );
@@ -402,6 +403,12 @@ module.exports = function( grunt ) {
 
       return await generatePhetioAPIFiles( repo, buildLocal.localTestingURL );
     } )
+  );
+
+  grunt.registerTask(
+    'report-java',
+    'Write the api file for a phet-io sim.',
+    wrapTask( () => reportJava( grunt.option( 'root' ), grunt.option( 'src' ), grunt.option( 'dst' ) ) )
   );
 
   /**

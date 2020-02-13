@@ -407,7 +407,7 @@ module.exports = function( grunt ) {
 
   grunt.registerTask(
     'report-java',
-    'Write the api file for a phet-io sim.',
+    'Identify sources, data and jars for a Java simulation, and output them to a single directory',
     wrapTask( () => reportJava( grunt.option( 'root' ), grunt.option( 'src' ), grunt.option( 'dst' ) ) )
   );
 

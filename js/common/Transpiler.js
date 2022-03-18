@@ -206,6 +206,7 @@ class Transpiler {
       this.visitDirectory( path.join( '..', repo, 'phet' ) );
       this.visitDirectory( path.join( '..', repo, 'phet-io' ) );
       this.visitDirectory( path.join( '..', repo, 'adapted-from-phet' ) );
+      this.visitDirectory( path.join( '..', repo, 'aki' ) );
     }
   }
 
